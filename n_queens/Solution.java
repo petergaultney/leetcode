@@ -59,12 +59,14 @@ public class Solution {
 		return diagonal;
 	}
 	
-    private void addQueenToNextRow(boolean[][] board, int row,
-								   boolean[] occupied_rows, 
-								   boolean[] occupied_columns,
-								   boolean[] occupied_se_diagonals,
-								   boolean[] occupied_ne_diagonals,
-								   List<List<String>> solutions) {
+    private void addQueenToNextRow(
+		boolean[][] board, int row,
+		boolean[] occupied_rows, 
+		boolean[] occupied_columns,
+		boolean[] occupied_se_diagonals,
+		boolean[] occupied_ne_diagonals,
+		List<List<String>> solutions)
+	{
         for (int col = 0; col < board.length; ++col) {
             if (!occupied_columns[col]) {
 				int se_diagonal = Solution.whichSeDiagonal(row, col, board.length);
